@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>동물 그리기</title>
+  <style>
+    .animal {
+      width: 200px;
+      height: 200px;
+      background-color: #e3e3e3;
+      border-radius: 50%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .animal:before {
+      content: '';
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      background-color: #fff;
+      border-radius: 50%;
+      left: 50%;
+      top: 80%;
+      transform: translateX(-50%);
+    }
+
+    .animal .ear {
+      position: absolute;
+      width: 50px;
+      height: 100px;
+      background-color: #e3e3e3;
+      top: 20%;
+      border-radius: 50% 50% 0 0;
+    }
+
+    .animal .ear.left {
+      left: 20%;
+      transform: rotate(45deg);
+    }
+
+    .animal .ear.right {
+      right: 20%;
+      transform: rotate(-45deg);
+    }
+
+    .animal .eye {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #000;
+      border-radius: 50%;
+      top: 40%;
+    }
+
+    .animal .eye.left {
+      left: 35%;
+    }
+
+    .animal .eye.right {
+      right: 35%;
+    }
+
+    .animal .mouth {
+      position: absolute;
+      width: 100px;
+      height: 40px;
+      background-color: #000;
+      border-radius: 50%;
+      bottom: 20%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  <div class="animal">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="eye left"></div>
+    <div class="eye right"></div>
+    <div class="mouth"></div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkbox Example</title>
+</head>
+<body>
+  <form>
+    <fieldset>
+      <legend>Checkbox Example</legend>
+      <div id="checkboxes"></div>
+    </fieldset>
+  </form>
+
+  <script>
+    // 체크박스를 생성할 부모 요소
+    var checkboxesContainer = document.getElementById('checkboxes');
+
+    // 50개의 체크박스 생성
+    for (var i = 1; i <= 50; i++) {
+      var checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.id = 'checkbox' + i;
+      checkbox.name = 'checkbox' + i;
+
+      var label = document.createElement('label');
+      label.htmlFor = 'checkbox' + i;
+      label.appendChild(document.createTextNode('Checkbox ' + i));
+
+      checkboxesContainer.appendChild(checkbox);
+      checkboxesContainer.appendChild(label);
+      checkboxesContainer.appendChild(document.createElement('br'));
+    }
+  </script>
+</body>
+</html>
